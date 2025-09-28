@@ -1,0 +1,31 @@
+@url = http://localhost:3000
+
+### Listado (todas)
+GET {{url}}/tareas
+
+### Listado filtrado (solo hechas)
+GET {{url}}/tareas?hecha=true
+
+### Crear
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Entregar TP2",
+  "hecha": false
+}
+
+### Detalle
+GET {{url}}/tareas/1
+
+### Modificar
+PUT {{url}}/tareas/1
+Content-Type: application/json
+
+{
+  "nombre": "Entregar TP2 (final)",
+  "hecha": true
+}
+
+### Borrar
+DELETE {{url}}/tareas/1
