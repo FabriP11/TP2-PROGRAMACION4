@@ -1,0 +1,29 @@
+@url = http://localhost:3000
+
+### Listado
+GET {{url}}/materias
+
+### Crear
+POST {{url}}/materias
+Content-Type: application/json
+
+{
+  "nombre": "Programación IV"
+}
+
+### Detalle
+GET {{url}}/materias/1
+
+### Alumnos de una materia
+GET {{url}}/materias/1/alumnos
+
+### Modificar
+PUT {{url}}/materias/1
+Content-Type: application/json
+
+{
+  "nombre": "Programación IV (Comision A)"
+}
+
+### Borrar
+DELETE {{url}}/materias/1

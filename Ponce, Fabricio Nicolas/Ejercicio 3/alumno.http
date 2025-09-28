@@ -1,0 +1,34 @@
+@url = http://localhost:3000
+
+### Listado de alumnos
+GET {{url}}/alumnos
+
+### Crear alumno
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+  "nombre": "Ana López",
+  "materia_id": 5,
+  "nota1": 8,
+  "nota2": 7.5,
+  "nota3": 9
+}
+
+### Detalle
+GET {{url}}/alumnos/1
+
+### Modificar
+PUT {{url}}/alumnos/1
+Content-Type: application/json
+
+{
+  "nombre": "Ana López",
+  "materia_id": 1,
+  "nota1": 9,
+  "nota2": 8,
+  "nota3": 7
+}
+
+### Borrar
+DELETE {{url}}/alumnos/1
